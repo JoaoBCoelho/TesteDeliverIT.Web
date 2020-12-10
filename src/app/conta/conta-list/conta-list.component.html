@@ -1,0 +1,22 @@
+<h2>Lista de Contas</h2>
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Valor Original</th>
+            <th scope="col">Valor Corrigido</th>
+            <th scope="col">Qtd Dias Atraso</th>
+            <th scope="col">Data de Pagamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let conta of contas">
+            <td>{{conta.nome}}</td>
+            <td>{{conta.valorOriginal}}</td>
+            <td>{{conta.valorCorrigido}}</td>
+            <td>{{conta.qtdDiasAtraso}}</td>
+            <td>{{formatDate(conta.dataPagamento)}}</td>
+        </tr>
+    </tbody>
+</table>
